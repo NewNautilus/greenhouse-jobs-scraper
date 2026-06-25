@@ -1,4 +1,4 @@
-[Greenhouse Jobs Scraper](https://apify.com/benthepythondev/greenhouse-jobs-scraper?fpr=data)
+[Greenhouse Jobs Scraper](https://apify.com/deadlyaccurate/greenhouse-jobs-scraper?fpr=data)
 
 $/$Skip to content[![Apify logo](/img/apify-logo/wordmark.svg)![Apify logo](/img/apify-logo/wordmark-white.svg)](https://apify.com/)
 
@@ -129,25 +129,25 @@ Talk to scraping experts](https://discord.com/invite/jyEM2PRvMU)
 - [Pricing](https://apify.com/pricing)
 - [Contact sales](https://apify.com/contact-sales)
 
-![Greenhouse Jobs Scraper - Tech Company Job Listings API avatar](https://images.apifyusercontent.com/Fs0_pNcF0fWD5HjCq0m9v1_vIXw4vWXQKCeuj5RAr4s/rs:fill:250:250/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vT3JOQ0NWNm8xajU1THlPVFotYWN0b3ItSE44cFNScUVLb1VJY1dWY1Mta25nSExSb0lFcy1HZW1pbmlfR2VuZXJhdGVkX0ltYWdlX2lrc2cwMWlrc2cwMWlrc2cucG5n.webp)
+![Greenhouse Jobs Scraper — All Companies, All Jobs avatar](https://apify.com/img/store/actor_picture.svg)
 
-Greenhouse Jobs Scraper - Tech Company Job Listings API
-
-Pricing
-
-from $3.00 / 1,000 results
-
-[Try for free](https://console.apify.com/actors/HN8pSRqEKoUIcWVcS?addFromActorId=HN8pSRqEKoUIcWVcS)[Go to Apify Store](https://apify.com/store)![Greenhouse Jobs Scraper - Tech Company Job Listings API](https://images.apifyusercontent.com/Fs0_pNcF0fWD5HjCq0m9v1_vIXw4vWXQKCeuj5RAr4s/rs:fill:250:250/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vT3JOQ0NWNm8xajU1THlPVFotYWN0b3ItSE44cFNScUVLb1VJY1dWY1Mta25nSExSb0lFcy1HZW1pbmlfR2VuZXJhdGVkX0ltYWdlX2lrc2cwMWlrc2cwMWlrc2cucG5n.webp)
-
-# Greenhouse Jobs Scraper - Tech Company Job Listings API
-
-[Try for free](https://console.apify.com/actors/HN8pSRqEKoUIcWVcS?addFromActorId=HN8pSRqEKoUIcWVcS)
-
-Scrape job listings from any company using Greenhouse ATS. Extract positions, departments, locations, and application URLs from thousands of tech companies like Stripe, Airbnb, Coinbase, and more. Filter by keywords, location, and remote-only roles.
+Greenhouse Jobs Scraper — All Companies, All Jobs
 
 Pricing
 
-from $3.00 / 1,000 results
+from $1.50 / 1,000 results
+
+[Try for free](https://console.apify.com/actors/shARfvH3khPvImoHN?addFromActorId=shARfvH3khPvImoHN)[Go to Apify Store](https://apify.com/store)![Greenhouse Jobs Scraper — All Companies, All Jobs](https://apify.com/img/store/actor_picture.svg)
+
+# Greenhouse Jobs Scraper — All Companies, All Jobs
+
+[Try for free](https://console.apify.com/actors/shARfvH3khPvImoHN?addFromActorId=shARfvH3khPvImoHN)
+
+Scrape jobs from 1,000+ Greenhouse companies. Auto-discovers boards — no URLs needed. Structured output: title, department, location, salary, seniority, apply URL. Unified/raw/both modes. Regex filters.
+
+Pricing
+
+from $1.50 / 1,000 results
 
 Rating
 
@@ -157,9 +157,9 @@ Rating
 
 Developer
 
-[![ben](/_next/image?url=https%3A%2F%2Fimages.apifyusercontent.com%2FpqThq18Wk4CDmdluTBBusmCN8VwIqUypI6XXXhCiS5Q%2Frs%3Afill%3A224%3A224%2Fcb%3A1%2FaHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vT3JOQ0NWNm8xajU1THlPVFotcHJvZmlsZS12MFVlR2d1S2hsLWJlbnRoZXB5dGhvbmRldi5wbmc.webp&w=3840&q=75)
+[![Doug Silkstone](/_next/image?url=https%3A%2F%2Fimages.apifyusercontent.com%2F27YKf9_xs-vvZy_K6Ka2It8m1qtac09Q1mWKfPPnlIU%2Frs%3Afill%3A224%3A224%2Fcb%3A1%2FaHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vZVJuTXZpOFp4dVlHRXE5THUtcHJvZmlsZS1ZRHZRQWhibFo0LWRvdWdfMjAyNi5wbmc.webp&w=3840&q=75)
 
-ben](https://apify.com/benthepythondev)Maintained by  Community
+Doug Silkstone](https://apify.com/deadlyaccurate)Maintained by  Community
 
 Actor stats
 
@@ -167,43 +167,107 @@ Actor stats
 
 Bookmarked
 
-71
+15
 
 Total users
 
-17
+2
 
 Monthly active users
 
-19 days ago
+2 months ago
 
 Last modified
 
 Categories
 
-[Jobs](https://apify.com/store/categories/jobs)[Developer tools](https://apify.com/store/categories/developer-tools)[Automation](https://apify.com/store/categories/automation)
+[Jobs](https://apify.com/store/categories/jobs)[Automation](https://apify.com/store/categories/automation)[Developer tools](https://apify.com/store/categories/developer-tools)
 
 Share
 
-[README](https://apify.com/benthepythondev/greenhouse-jobs-scraper)[Input](https://apify.com/benthepythondev/greenhouse-jobs-scraper/input-schema)[Pricing](https://apify.com/benthepythondev/greenhouse-jobs-scraper/pricing)[API](https://apify.com/benthepythondev/greenhouse-jobs-scraper/api/python)[Issues](https://apify.com/benthepythondev/greenhouse-jobs-scraper/issues/open)
+[README](https://apify.com/deadlyaccurate/greenhouse-jobs-scraper)[Input](https://apify.com/deadlyaccurate/greenhouse-jobs-scraper/input-schema)[Output](https://apify.com/deadlyaccurate/greenhouse-jobs-scraper/output-schema)[Pricing](https://apify.com/deadlyaccurate/greenhouse-jobs-scraper/pricing)[API](https://apify.com/deadlyaccurate/greenhouse-jobs-scraper/api/python)[Issues](https://apify.com/deadlyaccurate/greenhouse-jobs-scraper/issues/open)
 
 The Actor has no **README.md** file. Sad!
 
 ## You might also like
 
-[![Greenhouse Jobs Scraper avatar](https://images.apifyusercontent.com/eS3G9yf8gzPTKKIe8CTYsMQmdqzIDfRfZpWwlcp80E0/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vbnRIQ25oTlVrelhSN25iVVotYWN0b3ItWTRpZ1JqaG5HZjduVmVDT0otTGthVzlicVZSSy1hY3Rvci1pY29uLnBuZw.webp)
+[### Lever Jobs Scraper — All Companies, All Jobs
+
+deadlyaccurate / lever-jobs-scraper
+
+Scrape jobs from 600+ Lever companies. Auto-discovers boards — no URLs needed. Structured output: title, team, department, location, workplace type, apply URL. Unified/raw/both modes. Regex filters.
+
+![User avatar](https://images.apifyusercontent.com/QNekuUl03HTH9sQDKQUsEnMn28tJ4BuGT-fd2sAZIgA/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vazdnUXg5NVFxQmRIdEtPQVFuNlRmZWpvTmNkdTJRWTFxVktERklhT3Y0RS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZaVkp1VFhacE9GcDRkVmxIUlhFNVRIVXRjSEp2Wm1sc1pTMVpSSFpSUVdoaWJGbzBMV1J2ZFdkZk1qQXlOaTV3Ym1jLnBuZw.webp)
+
+Doug Silkstone
+
+10](https://apify.com/deadlyaccurate/lever-jobs-scraper)[![Ashby Jobs Scraper — All Companies, All Jobs avatar](https://images.apifyusercontent.com/t-WWHNu29vzQEJyKgMOKwfO91hydiXZ9yI1nES_jImM/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vZVJuTXZpOFp4dVlHRXE5THUtYWN0b3ItYTZpUE5WRnNBdGs4a2FZc24tZkFjNFNtVkRDYy1kb3VnXzIwMjYucG5n.webp)
+
+### Ashby Jobs Scraper — All Companies, All Jobs
+
+deadlyaccurate / ashby-jobs-scraper
+
+Scrape jobs from 1,000+ Ashby companies. Auto-discovers boards — no URLs needed. Structured output: title, department, team, compensation tiers, workplace type, apply URL. Unified/raw/both modes.
+
+![User avatar](https://images.apifyusercontent.com/QNekuUl03HTH9sQDKQUsEnMn28tJ4BuGT-fd2sAZIgA/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vazdnUXg5NVFxQmRIdEtPQVFuNlRmZWpvTmNkdTJRWTFxVktERklhT3Y0RS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZaVkp1VFhacE9GcDRkVmxIUlhFNVRIVXRjSEp2Wm1sc1pTMVpSSFpSUVdoaWJGbzBMV1J2ZFdkZk1qQXlOaTV3Ym1jLnBuZw.webp)
+
+Doug Silkstone
+
+25](https://apify.com/deadlyaccurate/ashby-jobs-scraper)[### Recruitee Jobs Scraper — All Companies, All Jobs
+
+deadlyaccurate / recruitee-jobs-scraper
+
+Scrape jobs from 600+ Recruitee companies. Auto-discovers boards — no URLs needed. Title, department, location, tags, employment type, remote status, apply URL. Unified/raw/both modes.
+
+![User avatar](https://images.apifyusercontent.com/QNekuUl03HTH9sQDKQUsEnMn28tJ4BuGT-fd2sAZIgA/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vazdnUXg5NVFxQmRIdEtPQVFuNlRmZWpvTmNkdTJRWTFxVktERklhT3Y0RS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZaVkp1VFhacE9GcDRkVmxIUlhFNVRIVXRjSEp2Wm1sc1pTMVpSSFpSUVdoaWJGbzBMV1J2ZFdkZk1qQXlOaTV3Ym1jLnBuZw.webp)
+
+Doug Silkstone
+
+2](https://apify.com/deadlyaccurate/recruitee-jobs-scraper)[### Workable Jobs Scraper — All Companies, All Jobs
+
+deadlyaccurate / workable-jobs-scraper
+
+Scrape jobs from 1,500+ Workable companies. Auto-discovers boards — no URLs needed. Structured locations (city/state/country), workplace type, apply URL. Latest v3 API. Unified/raw/both modes.
+
+![User avatar](https://images.apifyusercontent.com/QNekuUl03HTH9sQDKQUsEnMn28tJ4BuGT-fd2sAZIgA/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vazdnUXg5NVFxQmRIdEtPQVFuNlRmZWpvTmNkdTJRWTFxVktERklhT3Y0RS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZaVkp1VFhacE9GcDRkVmxIUlhFNVRIVXRjSEp2Wm1sc1pTMVpSSFpSUVdoaWJGbzBMV1J2ZFdkZk1qQXlOaTV3Ym1jLnBuZw.webp)
+
+Doug Silkstone
+
+3](https://apify.com/deadlyaccurate/workable-jobs-scraper)[![Greenhouse Jobs Scraper avatar](https://images.apifyusercontent.com/d22eowQVagRV_JJEpeKuUilIap6uMONfwkhrv-bN9WU/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vbUlSRFNKOHBLWGJMTUhIMDgtYWN0b3ItemJ0aFdjWFVON2drOFhobW0tRnNYMno0RGZ2NS1ncmVlbmhvdXNlLWpvYnMtc2NyYXBlci5wbmc.webp)
 
 ### Greenhouse Jobs Scraper
 
-automation-lab / greenhouse-jobs-scraper
+cryptosignals / greenhouse-jobs-scraper
 
-Scrape job listings from 220,000+ companies using Greenhouse ATS. Get titles, locations, departments, descriptions, and application questions from Airbnb, Stripe, Figma, and more. Fast HTTP-only API, no browser needed.
+Scrape job listings from any Greenhouse-powered company careers page. Extract job title, department, location, employment type, posted date, and apply URL. Ideal for job board aggregation, talent market research, and recruiting intelligence.
 
-![User avatar](https://images.apifyusercontent.com/2BFUHuGfbLY2pRm_Mp4LyoIgIzEX6NVldfIQNo9wi9E/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vVGVzYlZ0a2twdnh2M09nRWxvYThCdkdLX1NrNXdTck1sZWl2Ni1jeG9hSS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloZG1GMFlYSnpMbWRwZEdoMVluVnpaWEpqYjI1MFpXNTBMbU52YlM5MUx6Z3pNekU1TWo5MlBUUQ.webp)
+![User avatar](https://images.apifyusercontent.com/i3m4gVLAbXflwUmCn13_NN0EkZWByYz2T992gB6P_m0/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vNTVZOEtLSVMybXRuS0RLVnpKcjlRU3FvVVhoWGhBa2tQdHpCVXlOcm5LNC9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZiVWxTUkZOS09IQkxXR0pNVFVoSU1EZ3RjSEp2Wm1sc1pTMWhVVVk1WTBoWFRrTjZMWGRrYkMxc2IyZHZMVFV4TWk1d2JtYy5wbmc.webp)
 
-Stas Persiianenko
+Web Data Labs
 
-40](https://apify.com/automation-lab/greenhouse-jobs-scraper)[![Greenhouse Jobs Scraper avatar](https://images.apifyusercontent.com/MBa0N9UWydQZvgxcPkawYBMGpEwdZwUNnzEBDn_VwYs/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vY1ZNRVRxQUhSTmJuT0N6QXEtYWN0b3ItY1ZzeWlNaGhXYUtQTEtlc3ktbGJmZ0kwUFV4US1pY29uLnBuZw.webp)
+2](https://apify.com/cryptosignals/greenhouse-jobs-scraper)[### SmartRecruiters Jobs Scraper — All Companies, All Jobs
+
+deadlyaccurate / smartrecruiters-jobs-scraper
+
+Scrape jobs from 2,000+ SmartRecruiters companies (Visa, Bosch, Siemens, Adidas). Auto-discovers boards. Experience level, industry, department, location, apply URL. Unified/raw/both modes.
+
+![User avatar](https://images.apifyusercontent.com/QNekuUl03HTH9sQDKQUsEnMn28tJ4BuGT-fd2sAZIgA/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vazdnUXg5NVFxQmRIdEtPQVFuNlRmZWpvTmNkdTJRWTFxVktERklhT3Y0RS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZaVkp1VFhacE9GcDRkVmxIUlhFNVRIVXRjSEp2Wm1sc1pTMVpSSFpSUVdoaWJGbzBMV1J2ZFdkZk1qQXlOaTV3Ym1jLnBuZw.webp)
+
+Doug Silkstone
+
+4](https://apify.com/deadlyaccurate/smartrecruiters-jobs-scraper)[![Greenhouse Jobs Extractor avatar](https://images.apifyusercontent.com/9KipwPxJ2cI4LJeSR6R3xdIyk3kWctG78IdqwDaRVvk/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vc1RFbW13NmI3dDdXSnVNd2UtYWN0b3ItM2ZHU1Z3NFF3RGdJUjNVUXAtMVJxM25sdlRyQi1ncmVlbmhvdXNlLnBuZw.webp)
+
+### Greenhouse Jobs Extractor
+
+jupri / greenhouse
+
+💫 Scrape Greenhouse Jobs Websites
+
+![User avatar](https://images.apifyusercontent.com/XAHnvlPdpeB9YjBZUL_-tyK2mgnTu5ssvg-aft3y3Mg/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vT09jRS1KUjNHUkZYQlE4SmtqbWNWeENnRUN3Z2Y4VG1vbTRELUZfRFRoNC9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11WVcxaGVtOXVZWGR6TG1OdmJTOXpWRVZ0YlhjMllqZDBOMWRLZFUxM1pTOHphM0ZaU0Raa1RqUlJURUZ3UW1WVVNpMWpZWFF1YW5Cbi5qcGc.webp)
+
+cat
+
+40](https://apify.com/jupri/greenhouse)[![Greenhouse Jobs Scraper avatar](https://images.apifyusercontent.com/MBa0N9UWydQZvgxcPkawYBMGpEwdZwUNnzEBDn_VwYs/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vY1ZNRVRxQUhSTmJuT0N6QXEtYWN0b3ItY1ZzeWlNaGhXYUtQTEtlc3ktbGJmZ0kwUFV4US1pY29uLnBuZw.webp)
 
 ### Greenhouse Jobs Scraper
 
@@ -215,35 +279,7 @@ Collect job listings from any Greenhouse-powered careers page. Get titles, locat
 
 ParseForge
 
-11](https://apify.com/parseforge/greenhouse-jobs-scraper)[![Greenhouse Job Scraper avatar](https://images.apifyusercontent.com/FjqtQYfZC7ejy0biYpzvjdTYNd9Ci4n31X1R2HajTJ0/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vVmpPWERvNENUVXdoZFpYbHEtYWN0b3ItTjViSGZPeW1uVjJDRG9keWYtUldOUTZ5Y2ZmSy1sb2dvLnBuZw.webp)
-
-### Greenhouse Job Scraper
-
-bytepulselabs / greenhouse-job-scraper
-
-Scrape all Greenhouse job postings. Add one or more company job site URLs and extract job listings, requirements, benefits, and application details. Export scraped data, run the scraper via API, schedule and monitor runs, or integrate with other recruitment tools.
-
-![User avatar](https://images.apifyusercontent.com/LvgrQrv3cPOOAShQTC0jFhdskzMAHWxD7j94jBeEXpA/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTW5BZElQZ0RTb0RMUWtRV2dKOUtPaWg1R0ZLN0xROGNuMk5WQVJ0clFfOC9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZWbXBQV0VSdk5FTlVWWGRvWkZwWWJIRXRjSEp2Wm1sc1pTMHlXSE5VYlhCUFdHWkpMV3h2WjI4dWNHNW4ucG5n.webp)
-
-BytePulse Labs
-
-1.1K
-
-5.0](https://apify.com/bytepulselabs/greenhouse-job-scraper)[![Greenhouse Jobs API avatar](https://images.apifyusercontent.com/nPpeezlPlPElUUiw112bDo5pU2UtNht5soZfHTJl044/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vNDgyTHpZcEhDYzM2ek5hM2YtYWN0b3ItRnltZUxBZmZvN1VZTFdhZ00tT2hNZEhVT2JwaS1Db3B5X29mX0NvcHlfb2ZfTGlua2VkSW5fSm9ic19BUEklMjgxJTI5LnBuZw.webp)
-
-### Greenhouse Jobs API
-
-fantastic-jobs / greenhouse-jobs-api
-
-The perfect Greenhouse Job Scraper API! Direct postings from thousands of company career sites. Enriched with AI and LinkedIn company data, with up to 60 fields per job! Powered by Fantastic.jobs
-
-![User avatar](https://images.apifyusercontent.com/9Ex2NJP1cU2b3JlBj5LtVu06dN6MSeptFWGCFziQedY/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vT3F4STJHUHpxSjdTS0pnTXRIRGdCZTh6Y1MxRWpzT1RLTWMySUdrTnktcy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZORGd5VEhwWmNFaERZek0yZWs1aE0yWXRjSEp2Wm1sc1pTMXFaVzVSVDNJNFJWcE5MVVpoYm5SaGMzUnBZeTVxYjJKelgyeHZaMjhsTWpneUpUSTVMbkJ1WncucG5n.webp)
-
-Fantastic.jobs
-
-236
-
-3.0](https://apify.com/fantastic-jobs/greenhouse-jobs-api)[![Greenhouse Jobs Search avatar](https://images.apifyusercontent.com/8APvcZW3dO1xYHeDjAu8vidIsp5IV8VVln18WHlOBwY/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vZGZMV2loa2YzeW1zeGhtaEktYWN0b3ItMjJBVFhLZmVNaktpY01lTDgtY3VrV3R5QmxqRi1pZG5SMTQ4cGZjX2xvZ29zLmpwZWc.webp)
+11](https://apify.com/parseforge/greenhouse-jobs-scraper)[![Greenhouse Jobs Search avatar](https://images.apifyusercontent.com/8APvcZW3dO1xYHeDjAu8vidIsp5IV8VVln18WHlOBwY/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vZGZMV2loa2YzeW1zeGhtaEktYWN0b3ItMjJBVFhLZmVNaktpY01lTDgtY3VrV3R5QmxqRi1pZG5SMTQ4cGZjX2xvZ29zLmpwZWc.webp)
 
 ### Greenhouse Jobs Search
 
@@ -257,59 +293,19 @@ Enrico
 
 151
 
-5.0](https://apify.com/jobo.world/greenhouse-jobs-search)[![Greenhouse Job Board Scraper — Extract Jobs & Salaries avatar](https://images.apifyusercontent.com/Rlku-Tle57-IIEBS98Guag2b-OO7wVxnMDGPgk9F9w4/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vc3JJTmExMVdpVUpUSDZGeUwtYWN0b3Itcm9zdnFpN3dDdFZqeTFtRGEtYlBEZ3kwSlVSYy1ncmVlbmhvdXNlLnBuZw.webp)
+5.0](https://apify.com/jobo.world/greenhouse-jobs-search)[![Greenhouse avatar](https://images.apifyusercontent.com/uQIAhblJGKrQ5u4_fa3nUdf90Rgof7RN-5VTGA9ZBt8/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMuYW1hem9uYXdzLmNvbS9nb0V6eEwxZDI4RWkxVldSei9YaHluWGVmWHhlOHJLWm85UC1kbDR5aGtwZXV3cXdmbWJxc2Z3Yy5wbmc.webp)
 
-### Greenhouse Job Board Scraper — Extract Jobs & Salaries
+### Greenhouse
 
-vnx0 / greenhouse-jobs-scraper
+dlandberg / greenhouse
 
-Extract job listings, descriptions, salaries, and hiring data from any company's career page. Scrape thousands of job boards with no authentication needed.
+Scrape jobs posted from companies that use Greenhouse as their applicant tracking software. Easily get content, salary ranges, location, and much more.
 
-![User avatar](https://images.apifyusercontent.com/oxrh4-AUDbRy415PiUqUkHUOXt0-9CYLz7n11LYitwM/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vbDQ1Y1E0aktmbjBjLXppd2FVR0dLNkpkUFNqLVFuMmN1V0R3cnBsNmZfcy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTlzYURNdVoyOXZaMnhsZFhObGNtTnZiblJsYm5RdVkyOXRMMkV2UVVObk9HOWpTMTlWY2paSVlrNUZjazVtTlhWUU9VNWpWVGx1WVdsSExWQnRWVTQ0UW5oMU1rVmFiR0ZDUW5KbVpXRnhWREZNV1Qxek9UWXRZdw.webp)
+![User avatar](https://images.apifyusercontent.com/-Xf4mCAmGcBgiZkwjfSzbFxHYGV9FVquAhvnivhSLmc/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTWZ4akl5OTVTcjg1aURsVGkzWkQ4Ym5QalpFQjNNTXJwVUM4ZmNaQWxLcy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTlzYURNdVoyOXZaMnhsZFhObGNtTnZiblJsYm5RdVkyOXRMMkV2UVVkT2JYbDRZakE0YlhKMmFuUjZWVmxyTkhGRmVWUmlXRFZ5UzJoTVpqZFVkVkpZVVhZMVFYaG1SVGw0ZHc.webp)
 
-Vnx0
+Dmitry Landberg
 
-7](https://apify.com/vnx0/greenhouse-jobs-scraper)[![Universal ATS Job Scraper avatar](https://images.apifyusercontent.com/IYL0Aa0CVohJGn_UHlGEkGTW-OR33Y94SLlxeMEP4vw/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vY2YxOHVuZzlnQWs1VEZVaXAtYWN0b3ItWTlWVE8xbUR0ajVScGNHRTUtZ2ZEOUo3QnJWaC1TY3JlZW5zaG90XzIwMjUtMTItMTFfYXRfMTAuNDQuMTlfQU0ucG5n.webp)
-
-### Universal ATS Job Scraper
-
-express_kingfisher / ats-job-scraper
-
-Scrape thousands of job listings from Greenhouse and Lever career pages in seconds. Detects ATS type automatically and returns structured JSON (Title, Location, Salary, Description).
-
-![User avatar](https://images.apifyusercontent.com/pVYjdO6PHw4faC0_b8C69TXI8w0tKCO7HsOjZhSgNYs/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vOTVYUy1CNGlteUFHbUs3V3VncURVMDNiSnVTamRoVWYzOE80MkZwQ1ZaZy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloZG1GMFlYSnpMbWRwZEdoMVluVnpaWEpqYjI1MFpXNTBMbU52YlM5MUx6WTJOekV6T0RRMFAzWTlOQQ.webp)
-
-Prince Raj
-
-22](https://apify.com/express_kingfisher/ats-job-scraper)[### Indeed Job Listing Scraper
-
-bradmccloskey / indeed-job-scraper
-
-![User avatar](https://images.apifyusercontent.com/HgoLbmvZqwZMwVsjj1k9VTPi9eCOApQ3YDjVJq-l4gs/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vempadFpYQ2hXWUhYWTBCVkczbk9sOEtuWlk4bmw4ZDlPVVBNRVFzNWhoMC9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTlzYURNdVoyOXZaMnhsZFhObGNtTnZiblJsYm5RdVkyOXRMMkV2UVVObk9HOWpTMjgwVWxkbE0xQkpUV1ZwYldWUlJFZENOSE5OU0RGU1dWcHhjMDFNVTJoMVMxSXRVakZuYTNkTk5taHBiVkkzYnoxek9UWXRZdw.webp)
-
-Brad McCloskey
-
-40](https://apify.com/bradmccloskey/indeed-job-scraper)[### Greenhouse Job Scraper
-
-dalleyne / greenhouse-job-scraper
-
-Scrape Greenhouse job boards with department filtering. Extract jobs, salaries (multi-currency), locations, requirements, and metadata. Filter by department IDs and recency. Open source alternative with enhanced data extraction.
-
-![User avatar](https://images.apifyusercontent.com/M7B7U1u_VEtpAFL39OrDs3UXmcu8lNIeaCiXC-8CWxA/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vYTFBTU11T3BZTHFoUVZBN0NQSWFRQ2wyN3hSZGhNR3JMYlN4QjBhcUhucy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZkRTFzYVc4elNHTmxSbWMzWVd0eFprY3RjSEp2Wm1sc1pTMW5ZazlDZGtONVUxUk5MWE50WVd4c0xXMWxMbXB3WncuanBn.webp)
-
-Damien Alleyne
-
-74](https://apify.com/dalleyne/greenhouse-job-scraper)[![CareerBuilder Job Listings Scraper avatar](https://images.apifyusercontent.com/hPKSaShmHzm2l5n2EX1Ob2Ejd-cNJ4ye0vfhpSi4s_4/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vOEFQQndzUnBudWRLeTh5WUwtYWN0b3ItemZaR0xKWnNobXQ4SkttQWotRU9nMTRjazlUMy0yNDQyNjQyODhfMTAxNTk4ODgxNzcxMjYyNTVfNzUwODAxNDk0NjIwMzIwMDM3OV9uLnBuZw.webp)
-
-### CareerBuilder Job Listings Scraper
-
-ecomscrape / careerbuilder-job-listings-scraper
-
-Streamline job search automation with CareerBuilder Jobs Search Query Scraper. Extract job listings with salary data, skills & descriptions into multiple formats. Ideal for recruiters, HR teams & data analysts. Bulk scraping with proxy support for seamless recruitment operations.
-
-ecomscrape
-
-21](https://apify.com/ecomscrape/careerbuilder-job-listings-scraper)$/$
+144](https://apify.com/dlandberg/greenhouse)$/$
 
 Product
 
