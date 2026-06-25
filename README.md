@@ -1,235 +1,394 @@
-[Greenhouse Jobs Scraper](https://apify.com/cryptosignals/greenhouse-jobs-scraper?fpr=data)
+[Greenhouse Jobs Scraper](https://apify.com/benthepythondev/greenhouse-jobs-scraper?fpr=data)
 
-## Greenhouse ATS Jobs Scraper — Track Hiring at 10,000+ Companies
+$/$Skip to content[![Apify logo](/img/apify-logo/wordmark.svg)![Apify logo](/img/apify-logo/wordmark-white.svg)](https://apify.com/)
 
-Pull every open job from any company's Greenhouse ATS board — title, location, department, posted date, full description, and apply URL — without scraping their flaky careers page or stitching together aggregator data. Hand it a list of company slugs (`airbnb`, `stripe`, `coinbase`, ...) and get back a clean, structured dataset.
+- [![Promotion image background](https://cdn-cms.apify.com/Apify_Store_b55e0b3991.webp)
 
----
+Start here!
 
-## Why Scrape Greenhouse?
+Get data with ready-made web scrapers for popular websites
 
-Greenhouse is the applicant-tracking system (ATS) behind the public `/careers` and `/jobs/*` pages of roughly **10,000+ mid-market and enterprise employers** — Airbnb, Stripe, DoorDash, Coinbase, Pinterest, Robinhood, and most well-funded YC and Series A-D startups. Their job boards live at `boards.greenhouse.io/<company>` or behind a custom subdomain that proxies to Greenhouse.
+Browse 27,897 Actors](https://apify.com/store)
 
-If you want to monitor **who is hiring for what, when, and where**, Greenhouse is one of the highest-signal sources on the internet. But getting that data into a database is harder than it looks:
+Apify platform
 
-- Each company customizes its careers page — different layouts, different filters, different department naming.
-- Many embed the Greenhouse iframe inside their corporate site, which breaks naive scraping.
-- Bulk job aggregators (Indeed, LinkedIn) re-host stale snapshots with missing fields and delayed updates.
-- The official Greenhouse Job Board API requires per-company tokens and gives you no easy way to monitor hundreds of companies in one pass.
+- [Apify Store
 
-This actor handles all of it. Give it the company slugs you care about; get back fresh, structured job records every time it runs.
+Pre-built web scraping tools](https://apify.com/store)
+- [Actors
 
----
+Build and run serverless programs](https://apify.com/actors)
+- [Integrations
 
-## What Data You Get
+Connect with apps and services](https://apify.com/integrations)
+- [MCP
 
-Each job record returns a structured object with:
+Give your AI access to Actors](https://mcp.apify.com/)
 
-- **Company** — the Greenhouse board slug (e.g. `stripe`, `airbnb`)
-- **Title** — the job title (e.g. `Senior Backend Engineer`)
-- **Location** — city/region/remote text exactly as the company posts it
-- **Department** — internal department/team name (e.g. `Engineering`, `Sales — North America`)
-- **URL** — direct link to the job application page
-- **Description** — full plain-text job description (responsibilities, requirements, comp band when posted)
-- **Posted date** — when the listing went live (when Greenhouse exposes it)
-- **Job ID** — Greenhouse's internal identifier, useful for de-duping across runs
+Anti-blocking
 
----
+- [Anti-blocking
 
-## Use Cases
+Scrape without getting blocked](https://apify.com/anti-blocking)
+- [Proxy
 
-**1. Recruiter intelligence and candidate sourcing**
-Build a watchlist of target employers. Get a daily diff of new openings in your target roles — frontend, ML, sales, product — across hundreds of companies in one pull.
+Rotate scraper IP addresses](https://apify.com/proxy)
 
-**2. Sales prospecting (find companies hiring for X)**
-Looking for companies actively building data teams? Cybersecurity? AI infra? Filter the dataset by job title or department to surface in-market accounts with budget and intent. Pair it with revenue/funding data for tier-1 outbound lists.
+Open source
 
-**3. Competitive hiring analysis**
-Track which roles a competitor is opening. New VP of Sales? Three open SRE roles? They're scaling. A whole new "Platform" department? They're rebuilding. Hiring is a leading indicator of strategy.
+- [Crawlee
 
-**4. Market and sector trend research**
-Pull every company in a vertical and roll up by department, location, or seniority. Spot whether the AI agents space is hiring researchers or shipping engineers. Spot whether fintech is bringing back compliance hiring.
+Web scraping and crawling library](https://crawlee.dev/)
+- [![Promotion image background](https://cdn-cms.apify.com/mcp_server_configuration_manu_image_light_a56988095e.png)
 
-**5. Talent-market and compensation research**
-For HR analytics teams: aggregate roles by city, function, and seniority over time to track local labor demand and benchmark openings.
+MCP server configuration
 
-**6. Investor due-diligence**
-For VCs: monitor portfolio companies' hiring pace as a proxy for execution. Build comp tables across stage and sector from public job descriptions.
+Configure your Apify MCP server with Actors and tools for seamless integration with MCP clients.
 
----
+Start building](https://mcp.apify.com/)
 
-## How to Use
+Web data for
 
-1. Open the actor on Apify: [apify.com/cryptosignals/greenhouse-jobs-scraper](https://apify.com/cryptosignals/greenhouse-jobs-scraper)
-2. Click **Try for free** — no credit card required for small runs.
-3. Paste the **Greenhouse company slugs** you want to monitor. The slug is the part after `boards.greenhouse.io/` in the company's careers URL. For example:
+- [Enterprise](https://apify.com/enterprise)
+- [Startups](https://apify.com/resources/startups)
+- [Universities](https://apify.com/resources/universities)
+- [Nonprofits](https://apify.com/resources/nonprofits)
 
-- `https://boards.greenhouse.io/airbnb` → slug `airbnb`
-- `https://boards.greenhouse.io/stripe` → slug `stripe`
-- `https://boards.greenhouse.io/coinbase` → slug `coinbase`
-4. Set **Max jobs per company** (default 100, up to 5000).
-5. Click **Start** and download results as **JSON**, **CSV**, **Excel**, or pull them programmatically via the Apify API.
+Use cases
 
-> **Tip:** if a company's careers page lives at `careers.example.com/jobs/*` and you can't tell which Greenhouse slug it uses, view the page source — most embeds include the slug in an iframe `src` or a `boards.greenhouse.io/<slug>` link in the network tab.
+- [Data for generative AI](https://apify.com/use-cases/data-for-generative-ai)
+- [Data for AI agents](https://apify.com/use-cases/data-for-ai-agents)
+- [Lead generation](https://apify.com/use-cases/lead-generation)
+- [Market research](https://apify.com/use-cases/market-research)
+- [View more →](https://apify.com/use-cases)
 
----
+Consulting
 
-## Input Parameters
+- [Apify Professional Services](https://apify.com/professional-services)
+- [Apify Partners](https://apify.com/partners)
+- - [Documentation
 
-| Parameter | Type | Required | Description |
-| --- | --- | --- | --- |
-| `companies` | array of strings | Yes | List of Greenhouse board slugs to scrape (e.g. `["airbnb", "stripe", "coinbase"]`). |
-| `maxJobsPerCompany` | integer (1–5000) | Optional | Cap the number of jobs per company. Default 100. |
+Full reference for the Apify platform](https://docs.apify.com/)
 
-### Example input
+Get started
 
-```
-{
-  "companies": ["airbnb", "stripe", "coinbase", "pinterest", "robinhood"],
-  "maxJobsPerCompany": 500
-}
-```
+- [Code templates
 
----
+Python, JavaScript, and TypeScript](https://apify.com/templates)
+- [Web scraping academy
 
-## Output Example
+Courses for beginners and experts](https://docs.apify.com/academy)
+- [Monetize your code
 
-```
-[
-  {
-    "company": "stripe",
-    "id": "5012345",
-    "title": "Senior Software Engineer, Payments",
-    "location": "San Francisco, CA / Remote (US)",
-    "department": "Engineering — Payments",
-    "url": "https://boards.greenhouse.io/stripe/jobs/5012345",
-    "postedDate": "2026-04-22",
-    "description": "About Stripe\nStripe is a financial infrastructure platform... \n\nWhat you'll do\n- Design and ship payment systems handling billions of dollars...\n- Partner with product, design, and other engineering teams...\n\nWhat we're looking for\n- 5+ years of backend engineering experience\n- Strong track record building distributed systems..."
-  },
-  {
-    "company": "airbnb",
-    "id": "6678901",
-    "title": "Staff Machine Learning Engineer, Trust",
-    "location": "Seattle, WA",
-    "department": "Trust",
-    "url": "https://boards.greenhouse.io/airbnb/jobs/6678901",
-    "postedDate": "2026-04-25",
-    "description": "Airbnb was born in 2007...\n\nThe Difference You Will Make\n- Lead ML system design for fraud and risk models...\n- Mentor senior ICs and partner with product on trust strategy..."
-  }
-]
-```
+Publish your scrapers and get paid](https://apify.com/partners/actor-developers)
 
-Datasets can be exported as JSON, CSV, XML, or Excel from the Apify console, or fetched programmatically via the dataset API.
+Learn
 
----
+- [API reference](https://docs.apify.com/api)
+- [CLI](https://docs.apify.com/cli/)
+- [SDK](https://docs.apify.com/sdk)
+- [MCP](https://docs.apify.com/platform/integrations/mcp)
+- [Crawlee](https://crawlee.dev/)
 
-## Calling the Actor Programmatically
+[![Promotion image background](https://cdn-cms.apify.com/open_source_fair_share_light_resized_10_a382097735.png)
 
-### cURL
+Earn from your code
 
-```
-curl -X POST "https://api.apify.com/v2/acts/cryptosignals~greenhouse-jobs-scraper/run-sync-get-dataset-items?token=YOUR_APIFY_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "companies": ["airbnb", "stripe", "coinbase"],
-    "maxJobsPerCompany": 200
-  }'
-```
+$1M paid out last month. Many developers earn over $3k.
 
-### Python (apify-client)
+Start earning now](https://apify.com/partners/actor-developers)
+- - [Help and support
 
-```
-from apify_client import ApifyClient
+Advice and answers about Apify](https://help.apify.com/en/)
+- [Actor ideas
 
-client = ApifyClient("YOUR_APIFY_TOKEN")
+Get inspired to build Actors](https://apify.com/ideas)
+- [Changelog
 
-run = client.actor("cryptosignals/greenhouse-jobs-scraper").call(run_input={
-    "companies": ["airbnb", "stripe", "coinbase"],
-    "maxJobsPerCompany": 200,
-})
+See what’s new on Apify](https://apify.com/change-log)
+- [Customer stories
 
-for item in client.dataset(run["defaultDatasetId"]).iterate_items():
-    print(item["company"], "—", item["title"], "—", item.get("location"))
-```
+Find out how others use Apify](https://apify.com/success-stories)
 
-### Node.js (apify-client)
+Company
 
-```
-import { ApifyClient } from 'apify-client';
+- [About Apify](https://apify.com/about)
+- [Contact us](https://apify.com/contact)
+- [Blog](https://blog.apify.com/)
+- [Live events](https://lu.ma/apify)
+- [Partners](https://apify.com/partners)
+- [Jobs
 
-const client = new ApifyClient({ token: 'YOUR_APIFY_TOKEN' });
+We're hiring!](https://apify.com/jobs)
 
-const run = await client.actor('cryptosignals/greenhouse-jobs-scraper').call({
-    companies: ['airbnb', 'stripe', 'coinbase'],
-    maxJobsPerCompany: 200,
-});
+[![Promotion image background](https://cdn-cms.apify.com/Join_our_Discord_b7eb9d974a.webp)
 
-const { items } = await client.dataset(run.defaultDatasetId).listItems();
-console.log(`Pulled ${items.length} jobs`);
-```
+Join our Discord
 
----
+Talk to scraping experts](https://discord.com/invite/jyEM2PRvMU)
+- [Pricing](https://apify.com/pricing)
+- [Contact sales](https://apify.com/contact-sales)
 
-## Pricing
+![Greenhouse Jobs Scraper - Tech Company Job Listings API avatar](https://images.apifyusercontent.com/Fs0_pNcF0fWD5HjCq0m9v1_vIXw4vWXQKCeuj5RAr4s/rs:fill:250:250/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vT3JOQ0NWNm8xajU1THlPVFotYWN0b3ItSE44cFNScUVLb1VJY1dWY1Mta25nSExSb0lFcy1HZW1pbmlfR2VuZXJhdGVkX0ltYWdlX2lrc2cwMWlrc2cwMWlrc2cucG5n.webp)
 
-This actor uses **Pay-per-event** — you only pay for results scraped, not for compute time or failed runs.
+Greenhouse Jobs Scraper - Tech Company Job Listings API
 
-- **Cost**: $0.005 per job result.
-- **Free tier**: Apify's free plan includes $5/month of platform credits — enough to pull ~1,000 jobs to try it out.
-- **Typical run**: 5 companies × 200 jobs = 1,000 jobs → about $5.
-- **Daily monitoring of 50 companies**: about ~$1–$3 per day depending on how active their boards are.
+Pricing
 
-[See full Apify pricing →](https://apify.com/pricing)
+from $3.00 / 1,000 results
 
----
+[Try for free](https://console.apify.com/actors/HN8pSRqEKoUIcWVcS?addFromActorId=HN8pSRqEKoUIcWVcS)[Go to Apify Store](https://apify.com/store)![Greenhouse Jobs Scraper - Tech Company Job Listings API](https://images.apifyusercontent.com/Fs0_pNcF0fWD5HjCq0m9v1_vIXw4vWXQKCeuj5RAr4s/rs:fill:250:250/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vT3JOQ0NWNm8xajU1THlPVFotYWN0b3ItSE44cFNScUVLb1VJY1dWY1Mta25nSExSb0lFcy1HZW1pbmlfR2VuZXJhdGVkX0ltYWdlX2lrc2cwMWlrc2cwMWlrc2cucG5n.webp)
 
-## FAQ
+# Greenhouse Jobs Scraper - Tech Company Job Listings API
 
-**Is scraping Greenhouse legal?**
+[Try for free](https://console.apify.com/actors/HN8pSRqEKoUIcWVcS?addFromActorId=HN8pSRqEKoUIcWVcS)
 
-Public Greenhouse job boards are designed to be indexed and shared — that's their entire purpose. Scraping publicly visible data is generally considered lawful in many jurisdictions. The U.S. Ninth Circuit's *hiQ v. LinkedIn* decision (2022) affirmed that scraping publicly accessible data does not violate the Computer Fraud and Abuse Act. This actor only collects data from publicly visible Greenhouse board pages — no logins, no paywalls, no private endpoints. Always consult your own legal counsel for your specific use case.
+Scrape job listings from any company using Greenhouse ATS. Extract positions, departments, locations, and application URLs from thousands of tech companies like Stripe, Airbnb, Coinbase, and more. Filter by keywords, location, and remote-only roles.
 
-**How do I find a company's Greenhouse slug?**
+Pricing
 
-Go to the company's careers page. If the URL contains `boards.greenhouse.io/<slug>`, that's it. If they have a custom careers subdomain (e.g. `careers.example.com`), open the page source or DevTools network tab and look for a `boards.greenhouse.io/<slug>` URL in an iframe or fetch call.
+from $3.00 / 1,000 results
 
-**What if a company isn't on Greenhouse?**
+Rating
 
-This actor only works for Greenhouse boards. For Lever, Workable, Ashby, or LinkedIn job listings, see our other actors — including the [LinkedIn Jobs Scraper](https://apify.com/cryptosignals/linkedin-jobs-scraper).
+0.0
 
-**Can I schedule this actor?**
+( 0 )
 
-Yes. Use Apify's built-in scheduler to run on a cron — daily, weekly, hourly. Push results to a webhook, Google Sheets, Airtable, Slack, or your own database. A common pattern: schedule daily, dedupe by `id`, and alert on new openings matching a keyword filter ("VP", "Head of Data", "Solutions Engineer").
+Developer
 
-**Will I see only US jobs?**
+[![ben](/_next/image?url=https%3A%2F%2Fimages.apifyusercontent.com%2FpqThq18Wk4CDmdluTBBusmCN8VwIqUypI6XXXhCiS5Q%2Frs%3Afill%3A224%3A224%2Fcb%3A1%2FaHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vT3JOQ0NWNm8xajU1THlPVFotcHJvZmlsZS12MFVlR2d1S2hsLWJlbnRoZXB5dGhvbmRldi5wbmc.webp&w=3840&q=75)
 
-No. Greenhouse boards include all jobs the company chooses to publish — including EMEA, APAC, and remote roles. The `location` field returns whatever the company posted (e.g. `"London, UK"`, `"Remote — Worldwide"`, `"Berlin, Germany"`).
+ben](https://apify.com/benthepythondev)Maintained by  Community
 
-**What if the actor returns fewer jobs than I expect?**
+Actor stats
 
-Some companies hide certain departments or split internal/external boards. The actor returns what is publicly visible on `boards.greenhouse.io/<slug>`. If you suspect a missing field or a broken run, open an issue on the actor page and we'll investigate.
+0
 
----
+Bookmarked
 
-## Related Actors
+71
 
-Looking for more job-market or company data?
+Total users
 
-- **[LinkedIn Jobs Scraper](https://apify.com/cryptosignals/linkedin-jobs-scraper)** — Job listings from LinkedIn at scale, with company filters and seniority.
-- **[Crunchbase Scraper](https://apify.com/cryptosignals/crunchbase-scraper)** — Funding rounds, investors, founders, and company profiles.
-- **[G2 Reviews Scraper](https://apify.com/cryptosignals)** — Software reviews, pricing, and competitor mentions.
-- **[Capterra Reviews Scraper](https://apify.com/cryptosignals)** — Software category reviews and ratings.
+17
 
----
+Monthly active users
 
-## About Web Data Labs
+19 days ago
 
-This actor is maintained by [Web Data Labs](https://web-data-labs.com) — we publish a catalog of 100+ production-ready scrapers on the Apify platform covering jobs, e-commerce, social media, software reviews, and company data. Pay-per-result pricing means you only ever pay for data you receive.
+Last modified
 
-Questions or custom data needs? Reach out via the Apify contact form or visit [web-data-labs.com](https://web-data-labs.com).
+Categories
 
----
+[Jobs](https://apify.com/store/categories/jobs)[Developer tools](https://apify.com/store/categories/developer-tools)[Automation](https://apify.com/store/categories/automation)
 
-## New to Apify? Start here
+Share
 
-Sign up for Apify through [this link](https://apify.com/?fpr=yw6md3) to get $5 in free platform credits — enough to try this actor and many others on the Web Data Labs catalog at no cost.
+[README](https://apify.com/benthepythondev/greenhouse-jobs-scraper)[Input](https://apify.com/benthepythondev/greenhouse-jobs-scraper/input-schema)[Pricing](https://apify.com/benthepythondev/greenhouse-jobs-scraper/pricing)[API](https://apify.com/benthepythondev/greenhouse-jobs-scraper/api/python)[Issues](https://apify.com/benthepythondev/greenhouse-jobs-scraper/issues/open)
+
+The Actor has no **README.md** file. Sad!
+
+## You might also like
+
+[![Greenhouse Jobs Scraper avatar](https://images.apifyusercontent.com/eS3G9yf8gzPTKKIe8CTYsMQmdqzIDfRfZpWwlcp80E0/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vbnRIQ25oTlVrelhSN25iVVotYWN0b3ItWTRpZ1JqaG5HZjduVmVDT0otTGthVzlicVZSSy1hY3Rvci1pY29uLnBuZw.webp)
+
+### Greenhouse Jobs Scraper
+
+automation-lab / greenhouse-jobs-scraper
+
+Scrape job listings from 220,000+ companies using Greenhouse ATS. Get titles, locations, departments, descriptions, and application questions from Airbnb, Stripe, Figma, and more. Fast HTTP-only API, no browser needed.
+
+![User avatar](https://images.apifyusercontent.com/2BFUHuGfbLY2pRm_Mp4LyoIgIzEX6NVldfIQNo9wi9E/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vVGVzYlZ0a2twdnh2M09nRWxvYThCdkdLX1NrNXdTck1sZWl2Ni1jeG9hSS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloZG1GMFlYSnpMbWRwZEdoMVluVnpaWEpqYjI1MFpXNTBMbU52YlM5MUx6Z3pNekU1TWo5MlBUUQ.webp)
+
+Stas Persiianenko
+
+40](https://apify.com/automation-lab/greenhouse-jobs-scraper)[![Greenhouse Jobs Scraper avatar](https://images.apifyusercontent.com/MBa0N9UWydQZvgxcPkawYBMGpEwdZwUNnzEBDn_VwYs/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vY1ZNRVRxQUhSTmJuT0N6QXEtYWN0b3ItY1ZzeWlNaGhXYUtQTEtlc3ktbGJmZ0kwUFV4US1pY29uLnBuZw.webp)
+
+### Greenhouse Jobs Scraper
+
+parseforge / greenhouse-jobs-scraper
+
+Collect job listings from any Greenhouse-powered careers page. Get titles, locations, departments, offices, salary data, descriptions, and more from 10,000+ companies. Filter by keyword, department, or office. Structured JSON output ready for analysis, alerts, and integrations.
+
+![User avatar](https://images.apifyusercontent.com/7v_fw1tYOZK4ZaPIPpFJPq4bd1wmXxpvscQbD-yADiU/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vWkphSmZPeFdyX3NPNFdCNU0wNEpfRWYyc1BlaWxmN0JyWUJGTkt5TmNFdy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZZMVpOUlZSeFFVaFNUbUp1VDBONlFYRXRjSEp2Wm1sc1pTMW5VbmxJWTBGSlFXNWtMWEJoY25ObFptOXlaMlZmYkc5bmJ5NXdibWMucG5n.webp)
+
+ParseForge
+
+11](https://apify.com/parseforge/greenhouse-jobs-scraper)[![Greenhouse Job Scraper avatar](https://images.apifyusercontent.com/FjqtQYfZC7ejy0biYpzvjdTYNd9Ci4n31X1R2HajTJ0/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vVmpPWERvNENUVXdoZFpYbHEtYWN0b3ItTjViSGZPeW1uVjJDRG9keWYtUldOUTZ5Y2ZmSy1sb2dvLnBuZw.webp)
+
+### Greenhouse Job Scraper
+
+bytepulselabs / greenhouse-job-scraper
+
+Scrape all Greenhouse job postings. Add one or more company job site URLs and extract job listings, requirements, benefits, and application details. Export scraped data, run the scraper via API, schedule and monitor runs, or integrate with other recruitment tools.
+
+![User avatar](https://images.apifyusercontent.com/LvgrQrv3cPOOAShQTC0jFhdskzMAHWxD7j94jBeEXpA/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTW5BZElQZ0RTb0RMUWtRV2dKOUtPaWg1R0ZLN0xROGNuMk5WQVJ0clFfOC9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZWbXBQV0VSdk5FTlVWWGRvWkZwWWJIRXRjSEp2Wm1sc1pTMHlXSE5VYlhCUFdHWkpMV3h2WjI4dWNHNW4ucG5n.webp)
+
+BytePulse Labs
+
+1.1K
+
+5.0](https://apify.com/bytepulselabs/greenhouse-job-scraper)[![Greenhouse Jobs API avatar](https://images.apifyusercontent.com/nPpeezlPlPElUUiw112bDo5pU2UtNht5soZfHTJl044/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vNDgyTHpZcEhDYzM2ek5hM2YtYWN0b3ItRnltZUxBZmZvN1VZTFdhZ00tT2hNZEhVT2JwaS1Db3B5X29mX0NvcHlfb2ZfTGlua2VkSW5fSm9ic19BUEklMjgxJTI5LnBuZw.webp)
+
+### Greenhouse Jobs API
+
+fantastic-jobs / greenhouse-jobs-api
+
+The perfect Greenhouse Job Scraper API! Direct postings from thousands of company career sites. Enriched with AI and LinkedIn company data, with up to 60 fields per job! Powered by Fantastic.jobs
+
+![User avatar](https://images.apifyusercontent.com/9Ex2NJP1cU2b3JlBj5LtVu06dN6MSeptFWGCFziQedY/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vT3F4STJHUHpxSjdTS0pnTXRIRGdCZTh6Y1MxRWpzT1RLTWMySUdrTnktcy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZORGd5VEhwWmNFaERZek0yZWs1aE0yWXRjSEp2Wm1sc1pTMXFaVzVSVDNJNFJWcE5MVVpoYm5SaGMzUnBZeTVxYjJKelgyeHZaMjhsTWpneUpUSTVMbkJ1WncucG5n.webp)
+
+Fantastic.jobs
+
+236
+
+3.0](https://apify.com/fantastic-jobs/greenhouse-jobs-api)[![Greenhouse Jobs Search avatar](https://images.apifyusercontent.com/8APvcZW3dO1xYHeDjAu8vidIsp5IV8VVln18WHlOBwY/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vZGZMV2loa2YzeW1zeGhtaEktYWN0b3ItMjJBVFhLZmVNaktpY01lTDgtY3VrV3R5QmxqRi1pZG5SMTQ4cGZjX2xvZ29zLmpwZWc.webp)
+
+### Greenhouse Jobs Search
+
+jobo.world / greenhouse-jobs-search
+
+Search for jobs directly from Greenhouse ATS. Access top tech companies like Airbnb, Stripe, and Discord. Zero ghost jobs, verified daily. Perfect for job boards, AI agents & tech hiring research.
+
+![User avatar](https://images.apifyusercontent.com/AZyzvm5CMMvU9CLdiBypte8hsqqIHF8ibXL9WyRIfK4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vUVZTOUw5ck5xdnVIYTM0dGtpTV8xejhpY1NRU1lKclhQMWFQRkJxc1U3Yy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZaR1pNVjJsb2EyWXplVzF6ZUdodGFFa3RjSEp2Wm1sc1pTMTNVbkZ5TldwWlYyTnpMVEUzTmpZd05EWTBOamc1T0RZdWFuQm4uanBn.webp)
+
+Enrico
+
+151
+
+5.0](https://apify.com/jobo.world/greenhouse-jobs-search)[![Greenhouse Job Board Scraper — Extract Jobs & Salaries avatar](https://images.apifyusercontent.com/Rlku-Tle57-IIEBS98Guag2b-OO7wVxnMDGPgk9F9w4/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vc3JJTmExMVdpVUpUSDZGeUwtYWN0b3Itcm9zdnFpN3dDdFZqeTFtRGEtYlBEZ3kwSlVSYy1ncmVlbmhvdXNlLnBuZw.webp)
+
+### Greenhouse Job Board Scraper — Extract Jobs & Salaries
+
+vnx0 / greenhouse-jobs-scraper
+
+Extract job listings, descriptions, salaries, and hiring data from any company's career page. Scrape thousands of job boards with no authentication needed.
+
+![User avatar](https://images.apifyusercontent.com/oxrh4-AUDbRy415PiUqUkHUOXt0-9CYLz7n11LYitwM/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vbDQ1Y1E0aktmbjBjLXppd2FVR0dLNkpkUFNqLVFuMmN1V0R3cnBsNmZfcy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTlzYURNdVoyOXZaMnhsZFhObGNtTnZiblJsYm5RdVkyOXRMMkV2UVVObk9HOWpTMTlWY2paSVlrNUZjazVtTlhWUU9VNWpWVGx1WVdsSExWQnRWVTQ0UW5oMU1rVmFiR0ZDUW5KbVpXRnhWREZNV1Qxek9UWXRZdw.webp)
+
+Vnx0
+
+7](https://apify.com/vnx0/greenhouse-jobs-scraper)[![Universal ATS Job Scraper avatar](https://images.apifyusercontent.com/IYL0Aa0CVohJGn_UHlGEkGTW-OR33Y94SLlxeMEP4vw/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vY2YxOHVuZzlnQWs1VEZVaXAtYWN0b3ItWTlWVE8xbUR0ajVScGNHRTUtZ2ZEOUo3QnJWaC1TY3JlZW5zaG90XzIwMjUtMTItMTFfYXRfMTAuNDQuMTlfQU0ucG5n.webp)
+
+### Universal ATS Job Scraper
+
+express_kingfisher / ats-job-scraper
+
+Scrape thousands of job listings from Greenhouse and Lever career pages in seconds. Detects ATS type automatically and returns structured JSON (Title, Location, Salary, Description).
+
+![User avatar](https://images.apifyusercontent.com/pVYjdO6PHw4faC0_b8C69TXI8w0tKCO7HsOjZhSgNYs/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vOTVYUy1CNGlteUFHbUs3V3VncURVMDNiSnVTamRoVWYzOE80MkZwQ1ZaZy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloZG1GMFlYSnpMbWRwZEdoMVluVnpaWEpqYjI1MFpXNTBMbU52YlM5MUx6WTJOekV6T0RRMFAzWTlOQQ.webp)
+
+Prince Raj
+
+22](https://apify.com/express_kingfisher/ats-job-scraper)[### Indeed Job Listing Scraper
+
+bradmccloskey / indeed-job-scraper
+
+![User avatar](https://images.apifyusercontent.com/HgoLbmvZqwZMwVsjj1k9VTPi9eCOApQ3YDjVJq-l4gs/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vempadFpYQ2hXWUhYWTBCVkczbk9sOEtuWlk4bmw4ZDlPVVBNRVFzNWhoMC9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTlzYURNdVoyOXZaMnhsZFhObGNtTnZiblJsYm5RdVkyOXRMMkV2UVVObk9HOWpTMjgwVWxkbE0xQkpUV1ZwYldWUlJFZENOSE5OU0RGU1dWcHhjMDFNVTJoMVMxSXRVakZuYTNkTk5taHBiVkkzYnoxek9UWXRZdw.webp)
+
+Brad McCloskey
+
+40](https://apify.com/bradmccloskey/indeed-job-scraper)[### Greenhouse Job Scraper
+
+dalleyne / greenhouse-job-scraper
+
+Scrape Greenhouse job boards with department filtering. Extract jobs, salaries (multi-currency), locations, requirements, and metadata. Filter by department IDs and recency. Open source alternative with enhanced data extraction.
+
+![User avatar](https://images.apifyusercontent.com/M7B7U1u_VEtpAFL39OrDs3UXmcu8lNIeaCiXC-8CWxA/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vYTFBTU11T3BZTHFoUVZBN0NQSWFRQ2wyN3hSZGhNR3JMYlN4QjBhcUhucy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZkRTFzYVc4elNHTmxSbWMzWVd0eFprY3RjSEp2Wm1sc1pTMW5ZazlDZGtONVUxUk5MWE50WVd4c0xXMWxMbXB3WncuanBn.webp)
+
+Damien Alleyne
+
+74](https://apify.com/dalleyne/greenhouse-job-scraper)[![CareerBuilder Job Listings Scraper avatar](https://images.apifyusercontent.com/hPKSaShmHzm2l5n2EX1Ob2Ejd-cNJ4ye0vfhpSi4s_4/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vOEFQQndzUnBudWRLeTh5WUwtYWN0b3ItemZaR0xKWnNobXQ4SkttQWotRU9nMTRjazlUMy0yNDQyNjQyODhfMTAxNTk4ODgxNzcxMjYyNTVfNzUwODAxNDk0NjIwMzIwMDM3OV9uLnBuZw.webp)
+
+### CareerBuilder Job Listings Scraper
+
+ecomscrape / careerbuilder-job-listings-scraper
+
+Streamline job search automation with CareerBuilder Jobs Search Query Scraper. Extract job listings with salary data, skills & descriptions into multiple formats. Ideal for recruiters, HR teams & data analysts. Bulk scraping with proxy support for seamless recruitment operations.
+
+ecomscrape
+
+21](https://apify.com/ecomscrape/careerbuilder-job-listings-scraper)$/$
+
+Product
+
+- [Apify Store](https://apify.com/store)
+- [Integrations](https://apify.com/integrations)
+- [Proxy](https://apify.com/proxy)
+- [MCP](https://mcp.apify.com/)
+- [Crawlee](https://crawlee.dev/)
+
+Developers
+
+- [Documentation](https://docs.apify.com/)
+- [Code templates](https://apify.com/templates)
+- [API reference](https://docs.apify.com/api)
+- [Get paid on Apify](https://apify.com/partners/actor-developers)
+
+Consulting
+
+- [Professional Services](https://apify.com/professional-services)
+- [Apify Partners](https://apify.com/partners)
+
+Support
+
+- [Help & Support](https://help.apify.com/en/)
+- [Submit your ideas](https://apify.com/ideas)
+- [Forum](https://discord.apify.com/)
+
+Spotlight
+
+- [APIs](https://apify.com/api)
+- [What is web scraping?](https://blog.apify.com/what-is-web-scraping/)
+- [Best web scraping tools](https://blog.apify.com/best-web-scraping-tools/)
+- [Python web scraping libraries](https://blog.apify.com/what-are-the-best-python-web-scraping-libraries/)
+- [Scrapers](https://apify.com/scrapers)
+
+Company
+
+- [About Apify](https://apify.com/about)
+- [Contact us](https://apify.com/contact)
+- [Events](https://lu.ma/apify)
+- [Blog](https://blog.apify.com/)
+- [Become an affiliate](https://apify.com/partners/affiliate)
+- [Customer stories](https://apify.com/success-stories)
+- [Changelog](https://apify.com/change-log)
+- [JobsWe're hiring!](https://apify.com/jobs)
+- [Brand](https://apify.com/resources/brand)
+- [Impressum](https://docs.apify.com/legal)
+
+[![Apify logo](/img/apify-logo/logomark-32x32.svg)](https://apify.com/)
+
+Socials
+
+- 
+- 
+- 
+- 
+- 
+- 
+
+Security
+
+- [![GDPR image](https://cdn-cms.apify.com/GDPR_a807ac9a_ba0683f740.svg)](https://docs.apify.com/legal/gdpr-information)
+- [![SOC2 image](https://cdn-cms.apify.com/SOC_dc6cf5ae_f7999d700f.svg)](https://trust.apify.com/)
+
+Reviews
+
+- [![GetApp Apify user reviews image](/_next/image?url=https%3A%2F%2Fcdn-cms.apify.com%2FGet_App_1f4079a540.png&w=3840&q=75)](https://www.getapp.com/business-intelligence-analytics-software/a/apify/)
+- [![Software Advice Apify reviews image](/_next/image?url=https%3A%2F%2Fcdn-cms.apify.com%2FSoftwareadvice_88026ee6c2.png&w=3840&q=75)](https://www.softwareadvice.com/data-extraction/apify-profile/)
+- [![Capterra Apify user reviews image](/_next/image?url=https%3A%2F%2Fcdn-cms.apify.com%2FCapterra_ce83db3070.png&w=3840&q=75)](https://www.capterra.com/p/150854/Apify/)
+- [![G2 Apify user reviews image](/_next/image?url=https%3A%2F%2Fcdn-cms.apify.com%2FG2_d80d60f2f8.png&w=3840&q=75)](https://www.g2.com/products/apify/reviews)
+- [![TrustRadius Apify user reviews image](/_next/image?url=https%3A%2F%2Fcdn-cms.apify.com%2FTrust_Radius_7ca0e0bdad.png&w=3840&q=75)](https://www.trustradius.com/products/apify/reviews)
+- [![Crozdesk Apify user reviews image](/_next/image?url=https%3A%2F%2Fcdn-cms.apify.com%2FCrozdesk_1d12ceb040.png&w=3840&q=75)](https://crozdesk.com/software/apify)
+
+[Loading status...](https://status.apify.com/)
+
+[Terms of Use](https://docs.apify.com/legal/general-terms-and-conditions)
+
+[Privacy Policy](https://docs.apify.com/legal/privacy-policy)
+
+[Cookie Policy](https://docs.apify.com/legal/cookie-policy)
+
+[©  2026  Apify](https://docs.apify.com/legal)
