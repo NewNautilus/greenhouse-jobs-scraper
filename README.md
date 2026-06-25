@@ -1,186 +1,235 @@
-[Greenhouse Jobs Scraper](https://apify.com/vnx0/greenhouse-jobs-scraper?fpr=data)
+[Greenhouse Jobs Scraper](https://apify.com/cryptosignals/greenhouse-jobs-scraper?fpr=data)
 
-# Greenhouse Job Board Scraper — Extract Jobs, Salaries & Hiring Data
+## Greenhouse ATS Jobs Scraper — Track Hiring at 10,000+ Companies
 
-Extract job openings, salaries, descriptions, and hiring data from any company's career board. This Apify actor scrapes job titles, locations, departments, compensation, metadata, and application URLs from the Greenhouse applicant tracking system (ATS) used by over 8,000 companies including Stripe, Coinbase, Airbnb, Uber, and Robinhood. The only Greenhouse job board scraper you need for recruitment analytics, competitive intelligence, and job aggregation.
+Pull every open job from any company's Greenhouse ATS board — title, location, department, posted date, full description, and apply URL — without scraping their flaky careers page or stitching together aggregator data. Hand it a list of company slugs (`airbnb`, `stripe`, `coinbase`, ...) and get back a clean, structured dataset.
 
-## Overview
+---
 
-Greenhouse is one of the most popular ATS platforms, powering careers pages for thousands of companies worldwide. This actor provides a fast, reliable API alternative to manually browsing career pages, extracting all publicly available hiring data in structured JSON format. Perfect for recruitment analytics, competitive intelligence, job aggregation, and market research.
+## Why Scrape Greenhouse?
 
-## ✨ Features
+Greenhouse is the applicant-tracking system (ATS) behind the public `/careers` and `/jobs/*` pages of roughly **10,000+ mid-market and enterprise employers** — Airbnb, Stripe, DoorDash, Coinbase, Pinterest, Robinhood, and most well-funded YC and Series A-D startups. Their job boards live at `boards.greenhouse.io/<company>` or behind a custom subdomain that proxies to Greenhouse.
 
-| Feature | Description |
-| --- | --- |
-| 🔍 **Multi-board scraping** | Extract jobs from any company's Greenhouse career board |
-| 🏢 **8,000+ companies** | Works with Stripe, Coinbase, Airbnb, Uber, Robinhood, and thousands more |
-| 🚀 **No authentication needed** | Scrape public job boards instantly — no API keys or login required |
-| 📄 **Full job descriptions** | Get complete HTML and plain-text versions of every job listing |
-| 📍 **Structured locations** | Parsed location data with city, state, and country where available |
-| 🏷️ **Smart metadata extraction** | Automatically extracts employment type, experience level, remote status, and more |
-| 🔗 **Direct apply links** | Get direct application URLs for every job |
-| 🎯 **Department & location filters** | Only scrape jobs matching specific departments or locations |
-| 🌐 **Custom domain support** | Handles companies using their own career domains (e.g., careers.company.com) |
-| 📊 **Paginated results** | Automatically handles pagination for boards with hundreds of open roles |
-| 📋 **Structured JSON output** | Clean, consistent dataset schema ready for analysis |
-| ⚡ **High performance** | Extracts data efficiently with automatic retries and rate limiting |
+If you want to monitor **who is hiring for what, when, and where**, Greenhouse is one of the highest-signal sources on the internet. But getting that data into a database is harder than it looks:
+
+- Each company customizes its careers page — different layouts, different filters, different department naming.
+- Many embed the Greenhouse iframe inside their corporate site, which breaks naive scraping.
+- Bulk job aggregators (Indeed, LinkedIn) re-host stale snapshots with missing fields and delayed updates.
+- The official Greenhouse Job Board API requires per-company tokens and gives you no easy way to monitor hundreds of companies in one pass.
+
+This actor handles all of it. Give it the company slugs you care about; get back fresh, structured job records every time it runs.
+
+---
+
+## What Data You Get
+
+Each job record returns a structured object with:
+
+- **Company** — the Greenhouse board slug (e.g. `stripe`, `airbnb`)
+- **Title** — the job title (e.g. `Senior Backend Engineer`)
+- **Location** — city/region/remote text exactly as the company posts it
+- **Department** — internal department/team name (e.g. `Engineering`, `Sales — North America`)
+- **URL** — direct link to the job application page
+- **Description** — full plain-text job description (responsibilities, requirements, comp band when posted)
+- **Posted date** — when the listing went live (when Greenhouse exposes it)
+- **Job ID** — Greenhouse's internal identifier, useful for de-duping across runs
+
+---
 
 ## Use Cases
 
-- **Scrape competitor job openings** — Track what roles your competitors are hiring for
-- **Job aggregation platforms** — Build job boards by aggregating listings from multiple companies
-- **Recruitment market research** — Analyze hiring trends across industries, locations, and departments
-- **Salary data collection** — Extract compensation information when companies include it
-- **Department growth tracking** — Monitor which teams are expanding at target companies
-- **Remote job discovery** — Filter for remote positions across thousands of companies
-- **Talent pipeline building** — Identify companies hiring for specific skill sets
+**1. Recruiter intelligence and candidate sourcing**
+Build a watchlist of target employers. Get a daily diff of new openings in your target roles — frontend, ML, sales, product — across hundreds of companies in one pull.
 
-## How It Works
+**2. Sales prospecting (find companies hiring for X)**
+Looking for companies actively building data teams? Cybersecurity? AI infra? Filter the dataset by job title or department to surface in-market accounts with budget and intent. Pair it with revenue/funding data for tier-1 outbound lists.
 
-1. **Enter board URLs or company names** — Provide career board URLs or just type company names
-2. **Actor fetches all jobs** — Extracts all job listings with automatic pagination
-3. **Results in structured JSON** — Get clean, structured data in the Apify dataset, ready for export to CSV, JSON, Excel, or your database
+**3. Competitive hiring analysis**
+Track which roles a competitor is opening. New VP of Sales? Three open SRE roles? They're scaling. A whole new "Platform" department? They're rebuilding. Hiring is a leading indicator of strategy.
 
-## Input
+**4. Market and sector trend research**
+Pull every company in a vertical and roll up by department, location, or seniority. Spot whether the AI agents space is hiring researchers or shipping engineers. Spot whether fintech is bringing back compliance hiring.
 
-| Field | Type | Description | Required | Default |
-| --- | --- | --- | --- | --- |
-| `startUrls` | array | List of career board URLs to scrape | No | `[]` |
-| `companyNames` | array | Company names to scrape jobs from | No | `[]` |
-| `maxJobsPerBoard` | integer | Maximum jobs to extract per board (0 = unlimited) | No | `0` |
-| `includeFullDescription` | boolean | Include full HTML job descriptions | No | `true` |
-| `filterDepartments` | array | Only include jobs from these departments | No | `[]` |
-| `filterLocations` | array | Only include jobs matching these locations | No | `[]` |
-| `proxyConfiguration` | object | Apify proxy configuration | No | `{"useApifyProxy": true}` |
+**5. Talent-market and compensation research**
+For HR analytics teams: aggregate roles by city, function, and seniority over time to track local labor demand and benchmark openings.
 
-**Note:** Provide at least one of `startUrls` or `companyNames`.
+**6. Investor due-diligence**
+For VCs: monitor portfolio companies' hiring pace as a proxy for execution. Build comp tables across stage and sector from public job descriptions.
 
-### Supported URL Formats
+---
 
-- `https://boards.greenhouse.io/{company}`
-- `https://boards.greenhouse.io/{company}/jobs`
-- Custom career domains (e.g., `https://careers.company.com`)
+## How to Use
 
-## Output
+1. Open the actor on Apify: [apify.com/cryptosignals/greenhouse-jobs-scraper](https://apify.com/cryptosignals/greenhouse-jobs-scraper)
+2. Click **Try for free** — no credit card required for small runs.
+3. Paste the **Greenhouse company slugs** you want to monitor. The slug is the part after `boards.greenhouse.io/` in the company's careers URL. For example:
 
-Each job listing includes:
+- `https://boards.greenhouse.io/airbnb` → slug `airbnb`
+- `https://boards.greenhouse.io/stripe` → slug `stripe`
+- `https://boards.greenhouse.io/coinbase` → slug `coinbase`
+4. Set **Max jobs per company** (default 100, up to 5000).
+5. Click **Start** and download results as **JSON**, **CSV**, **Excel**, or pull them programmatically via the Apify API.
 
-| Field | Type | Description |
-| --- | --- | --- |
-| `id` | integer | Internal job listing ID |
-| `title` | string | Job title |
-| `company` | string | Company name |
-| `url` | string | Direct link to job listing |
-| `applicationUrl` | string | Direct application link |
-| `location` | object | Primary job location |
-| `departments` | array | Departments (e.g., ["Engineering", "Product"]) |
-| `offices` | array | Office locations |
-| `description` | string | Full job description (HTML) |
-| `descriptionText` | string | Plain text description |
-| `requisitionId` | string | Company requisition ID |
-| `internalJobId` | string | Company's internal job reference ID |
-| `employmentType` | string | Full-time, Part-time, Contract, etc. |
-| `experienceLevel` | string | Entry, Mid, Senior, Lead, etc. |
-| `remote` | boolean | Whether position is remote |
-| `metadata` | object | All custom company metadata fields |
-| `updatedAt` | string | Last updated timestamp (ISO 8601) |
-| `scrapedAt` | string | When job was scraped (ISO 8601) |
+> **Tip:** if a company's careers page lives at `careers.example.com/jobs/*` and you can't tell which Greenhouse slug it uses, view the page source — most embeds include the slug in an iframe `src` or a `boards.greenhouse.io/<slug>` link in the network tab.
 
-## Sample Output
+---
+
+## Input Parameters
+
+| Parameter | Type | Required | Description |
+| --- | --- | --- | --- |
+| `companies` | array of strings | Yes | List of Greenhouse board slugs to scrape (e.g. `["airbnb", "stripe", "coinbase"]`). |
+| `maxJobsPerCompany` | integer (1–5000) | Optional | Cap the number of jobs per company. Default 100. |
+
+### Example input
 
 ```
 {
-  "id": 7532733,
-  "title": "Account Executive, AI Sales",
-  "company": "Stripe",
-  "url": "https://stripe.com/jobs/search?gh_jid=7532733",
-  "applicationUrl": "https://stripe.com/jobs/search?gh_jid=7532733",
-  "location": {
-    "name": "San Francisco, CA"
+  "companies": ["airbnb", "stripe", "coinbase", "pinterest", "robinhood"],
+  "maxJobsPerCompany": 500
+}
+```
+
+---
+
+## Output Example
+
+```
+[
+  {
+    "company": "stripe",
+    "id": "5012345",
+    "title": "Senior Software Engineer, Payments",
+    "location": "San Francisco, CA / Remote (US)",
+    "department": "Engineering — Payments",
+    "url": "https://boards.greenhouse.io/stripe/jobs/5012345",
+    "postedDate": "2026-04-22",
+    "description": "About Stripe\nStripe is a financial infrastructure platform... \n\nWhat you'll do\n- Design and ship payment systems handling billions of dollars...\n- Partner with product, design, and other engineering teams...\n\nWhat we're looking for\n- 5+ years of backend engineering experience\n- Strong track record building distributed systems..."
   },
-  "departments": ["1175 Enterprise - Account Executives (NA)"],
-  "offices": [
-    {
-      "name": "US",
-      "location": null
-    }
-  ],
-  "description": "<h2>Who we are</h2><h3>About Stripe</h3><p>Stripe is a financial infrastructure platform for businesses...</p>",
-  "descriptionText": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies - from the world's largest enterprises to the most ambitious startups - use Stripe to accept payments...",
-  "requisitionId": "See Opening ID",
-  "internalJobId": "3336216",
-  "employmentType": null,
-  "experienceLevel": null,
-  "remote": null,
-  "metadata": {},
-  "updatedAt": "2026-04-16T11:05:52-04:00",
-  "scrapedAt": "2026-04-19T13:55:14.100852+00:00"
-}
+  {
+    "company": "airbnb",
+    "id": "6678901",
+    "title": "Staff Machine Learning Engineer, Trust",
+    "location": "Seattle, WA",
+    "department": "Trust",
+    "url": "https://boards.greenhouse.io/airbnb/jobs/6678901",
+    "postedDate": "2026-04-25",
+    "description": "Airbnb was born in 2007...\n\nThe Difference You Will Make\n- Lead ML system design for fraud and risk models...\n- Mentor senior ICs and partner with product on trust strategy..."
+  }
+]
 ```
 
-## Cost & Usage
+Datasets can be exported as JSON, CSV, XML, or Excel from the Apify console, or fetched programmatically via the dataset API.
 
-This actor uses event-based pricing:
+---
 
-- **$0.002 per job** ($2 per 1,000 jobs)
-- Typical board has 20-200 jobs
-- Example: Scraping 10 companies with 50 jobs each = 500 jobs = $1.00
+## Calling the Actor Programmatically
 
-Apify free tier includes $5 of free usage monthly, enough for ~2,500 jobs.
-
-## Tips
-
-- **Use company names for quick scraping** — Just enter `stripe` instead of the full URL
-- **Check the dataset tab** — Results appear in real-time as jobs are scraped
-- **Filter before scraping** — Use department/location filters to reduce costs
-- **Combine with other scrapers** — Use alongside LinkedIn or Indeed scrapers for comprehensive coverage
-- **Monitor regularly** — Set up scheduled runs to track new job postings
-- **Export to your tools** — Connect results to your ATS, CRM, or analytics platform via Apify integrations
-
-## Example Use Cases
-
-### Track Competitor Hiring
+### cURL
 
 ```
-{
-  "companyNames": ["stripe", "square", "adyen", "checkout"],
-  "filterDepartments": ["Engineering", "Product"]
-}
+curl -X POST "https://api.apify.com/v2/acts/cryptosignals~greenhouse-jobs-scraper/run-sync-get-dataset-items?token=YOUR_APIFY_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "companies": ["airbnb", "stripe", "coinbase"],
+    "maxJobsPerCompany": 200
+  }'
 ```
 
-### Find Remote Engineering Jobs
+### Python (apify-client)
 
 ```
-{
-  "companyNames": ["gitlab", "zapier", "automattic", "doist"],
-  "filterLocations": ["Remote"]
-}
+from apify_client import ApifyClient
+
+client = ApifyClient("YOUR_APIFY_TOKEN")
+
+run = client.actor("cryptosignals/greenhouse-jobs-scraper").call(run_input={
+    "companies": ["airbnb", "stripe", "coinbase"],
+    "maxJobsPerCompany": 200,
+})
+
+for item in client.dataset(run["defaultDatasetId"]).iterate_items():
+    print(item["company"], "—", item["title"], "—", item.get("location"))
 ```
 
-### Build a Job Board
+### Node.js (apify-client)
 
 ```
-{
-  "startUrls": [
-    "https://boards.greenhouse.io/stripe",
-    "https://boards.greenhouse.io/coinbase",
-    "https://boards.greenhouse.io/airbnb"
-  ],
-  "maxJobsPerBoard": 100
-}
+import { ApifyClient } from 'apify-client';
+
+const client = new ApifyClient({ token: 'YOUR_APIFY_TOKEN' });
+
+const run = await client.actor('cryptosignals/greenhouse-jobs-scraper').call({
+    companies: ['airbnb', 'stripe', 'coinbase'],
+    maxJobsPerCompany: 200,
+});
+
+const { items } = await client.dataset(run.defaultDatasetId).listItems();
+console.log(`Pulled ${items.length} jobs`);
 ```
 
-## Limitations
+---
 
-- Only works with companies using Greenhouse ATS
-- Some companies may have private boards (not publicly accessible)
-- Custom metadata fields vary by company
-- Salary information only included if company publishes it
+## Pricing
 
-## Support
+This actor uses **Pay-per-event** — you only pay for results scraped, not for compute time or failed runs.
 
-For issues or questions, please contact us through the Apify platform.
+- **Cost**: $0.005 per job result.
+- **Free tier**: Apify's free plan includes $5/month of platform credits — enough to pull ~1,000 jobs to try it out.
+- **Typical run**: 5 companies × 200 jobs = 1,000 jobs → about $5.
+- **Daily monitoring of 50 companies**: about ~$1–$3 per day depending on how active their boards are.
 
-## Privacy & Compliance
+[See full Apify pricing →](https://apify.com/pricing)
 
-This actor only extracts publicly available data from Greenhouse job boards. No authentication or private data access is used. Always comply with applicable laws and terms of service when using scraped data.
+---
+
+## FAQ
+
+**Is scraping Greenhouse legal?**
+
+Public Greenhouse job boards are designed to be indexed and shared — that's their entire purpose. Scraping publicly visible data is generally considered lawful in many jurisdictions. The U.S. Ninth Circuit's *hiQ v. LinkedIn* decision (2022) affirmed that scraping publicly accessible data does not violate the Computer Fraud and Abuse Act. This actor only collects data from publicly visible Greenhouse board pages — no logins, no paywalls, no private endpoints. Always consult your own legal counsel for your specific use case.
+
+**How do I find a company's Greenhouse slug?**
+
+Go to the company's careers page. If the URL contains `boards.greenhouse.io/<slug>`, that's it. If they have a custom careers subdomain (e.g. `careers.example.com`), open the page source or DevTools network tab and look for a `boards.greenhouse.io/<slug>` URL in an iframe or fetch call.
+
+**What if a company isn't on Greenhouse?**
+
+This actor only works for Greenhouse boards. For Lever, Workable, Ashby, or LinkedIn job listings, see our other actors — including the [LinkedIn Jobs Scraper](https://apify.com/cryptosignals/linkedin-jobs-scraper).
+
+**Can I schedule this actor?**
+
+Yes. Use Apify's built-in scheduler to run on a cron — daily, weekly, hourly. Push results to a webhook, Google Sheets, Airtable, Slack, or your own database. A common pattern: schedule daily, dedupe by `id`, and alert on new openings matching a keyword filter ("VP", "Head of Data", "Solutions Engineer").
+
+**Will I see only US jobs?**
+
+No. Greenhouse boards include all jobs the company chooses to publish — including EMEA, APAC, and remote roles. The `location` field returns whatever the company posted (e.g. `"London, UK"`, `"Remote — Worldwide"`, `"Berlin, Germany"`).
+
+**What if the actor returns fewer jobs than I expect?**
+
+Some companies hide certain departments or split internal/external boards. The actor returns what is publicly visible on `boards.greenhouse.io/<slug>`. If you suspect a missing field or a broken run, open an issue on the actor page and we'll investigate.
+
+---
+
+## Related Actors
+
+Looking for more job-market or company data?
+
+- **[LinkedIn Jobs Scraper](https://apify.com/cryptosignals/linkedin-jobs-scraper)** — Job listings from LinkedIn at scale, with company filters and seniority.
+- **[Crunchbase Scraper](https://apify.com/cryptosignals/crunchbase-scraper)** — Funding rounds, investors, founders, and company profiles.
+- **[G2 Reviews Scraper](https://apify.com/cryptosignals)** — Software reviews, pricing, and competitor mentions.
+- **[Capterra Reviews Scraper](https://apify.com/cryptosignals)** — Software category reviews and ratings.
+
+---
+
+## About Web Data Labs
+
+This actor is maintained by [Web Data Labs](https://web-data-labs.com) — we publish a catalog of 100+ production-ready scrapers on the Apify platform covering jobs, e-commerce, social media, software reviews, and company data. Pay-per-result pricing means you only ever pay for data you receive.
+
+Questions or custom data needs? Reach out via the Apify contact form or visit [web-data-labs.com](https://web-data-labs.com).
+
+---
+
+## New to Apify? Start here
+
+Sign up for Apify through [this link](https://apify.com/?fpr=yw6md3) to get $5 in free platform credits — enough to try this actor and many others on the Web Data Labs catalog at no cost.
